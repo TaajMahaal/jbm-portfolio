@@ -22,3 +22,15 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Editor temporary files
+*~
+*.swp
+*.swo
+.vscode/
+
+# Claude Code
+.claude/
+
+# Other temp files
+.mcp.json
