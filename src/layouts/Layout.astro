@@ -1,0 +1,68 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Jean-Baptiste Machemie - Engineering Manager & Senior Software Engineer'
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- NerdFont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+
+    <!-- Hidden easter egg message in source code -->
+    <!--
+      ╔══════════════════════════════════════════════════════════════════╗
+      ║  👋 Hello, fellow code explorer!                                 ║
+      ║                                                                  ║
+      ║  You found the hidden message!                                   ║
+      ║  If you're reading this, you clearly know your way around.       ║
+      ║                                                                  ║
+      ║  This portfolio showcases:                                       ║
+      ║  • Clean, maintainable TypeScript/React code                     ║
+      ║  • Modern build tools (Astro, Vite)                             ║
+      ║  • Performant animations (Framer Motion)                        ║
+      ║  • 3D effects (Three.js)                                        ║
+      ║  • Retro aesthetic with modern polish                           ║
+      ║                                                                  ║
+      ║  Built with passion for engineering excellence.                  ║
+      ║  Let's build something amazing together!                         ║
+      ║                                                                  ║
+      ║  jb.machemie@gmail.com                                          ║
+      ╚══════════════════════════════════════════════════════════════════╝
+    -->
+  </body>
+</html>

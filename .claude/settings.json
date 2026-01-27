@@ -1,0 +1,36 @@
+{
+  "hooks": {
+    "postToolUse": [
+      {
+        "name": "auto-format",
+        "match": {
+          "toolName": ["Edit", "Write"],
+          "filePattern": "**/*.{ts,tsx,js,jsx,css,astro,json,md}"
+        },
+        "command": "npx prettier --write {{file}}",
+        "continueOnError": true
+      },
+      {
+        "name": "type-check",
+        "match": {
+          "toolName": ["Edit", "Write"],
+          "filePattern": "**/*.{ts,tsx}"
+        },
+        "command": "npm run type-check",
+        "continueOnError": true
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Edit",
+      "Write",
+      "Read",
+      "Glob",
+      "Grep",
+      "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(git *)"
+    ]
+  }
+}

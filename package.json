@@ -6,9 +6,24 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check": "astro check",
+    "clean": "rm -rf dist node_modules/.vite",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "astro": "^5.16.15"
+    "@astrojs/react": "^4.4.2",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.5.0",
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/react": "^19.2.9",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^5.16.15",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.29.2",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tailwindcss": "^4.1.18",
+    "three": "^0.182.0"
   }
 }

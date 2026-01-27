@@ -1,0 +1,14 @@
+# Claude Code local overrides (user-specific settings)
+# Uncomment if you want to keep personal overrides out of version control
+
+# settings.local.json
+# *.local.*
+
+# Generally, we want to commit:
+# - settings.json (team hooks and permissions)
+# - skills/ (shared skills)
+# - agents/ (shared agents)
+# - README.md (documentation)
+
+# Keep this directory tracked in git
+!.gitkeep
