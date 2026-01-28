@@ -18,10 +18,12 @@ export default function AutoTilingDesktop() {
       {/* Statusbar */}
       <div className="statusbar px-4 py-3 flex items-center justify-between relative z-30">
         {/* Left: Title + Connection */}
-        <div className="flex items-center gap-4">
-          <span className="text-2xl font-bold tracking-tight status-title">
-            jbm@portfolio
-          </span>
+        <div className="flex items-center gap-8">
+          <div className="status-title-container">
+            <span className="status-title" data-text="jbm@portfolio">
+              jbm@portfolio
+            </span>
+          </div>
           <span className={`text-xs font-semibold ${systemInfo.isOnline ? 'status-online' : 'text-red-400'}`}>
             {systemInfo.isOnline ? '●' : '○'} {systemInfo.isOnline ? 'online' : 'offline'}
           </span>

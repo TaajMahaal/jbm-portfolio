@@ -549,13 +549,64 @@ kbd {
   text-shadow: 0 0 10px rgba(237, 200, 0, 0.5);
 }
 
-/* Status bar title gradient - monospace terminal style */
+/* Status bar title container */
+.status-title-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Status bar title - Gemini pixel art style */
 .status-title {
-  font-family: var(--font-mono);
-  color: #4fd1c5;
-  text-shadow: 0 0 10px rgba(79, 209, 197, 0.5);
-  font-weight: 400;
-  letter-spacing: 0.02em;
+  position: relative;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.75rem;
+  letter-spacing: 0.08em;
+  background: linear-gradient(
+    90deg,
+    #4fd1c5 0%,
+    #7eeadd 40%,
+    #edc800 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-stroke: 1px rgba(79, 209, 197, 0.5);
+  paint-order: stroke fill;
+  image-rendering: pixelated;
+  -webkit-font-smoothing: none;
+  filter: drop-shadow(0 0 8px rgba(79, 209, 197, 0.4)) brightness(1.1);
+}
+
+/* Ombre portée avec texture de grain */
+.status-title::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      rgba(0, 0, 0, 0.2) 1px,
+      transparent 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      rgba(0, 0, 0, 0.2) 1px,
+      transparent 2px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(26, 83, 92, 0.8) 0%,
+      rgba(15, 63, 69, 0.8) 40%,
+      rgba(100, 80, 0, 0.8) 100%
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.3);
+  z-index: -1;
 }
 
 /* Timeline avec gradient animé comme les headers */
@@ -728,11 +779,11 @@ kbd {
 }
 
 .status-online {
-  color: #edc800;
+  color: #7eeadd;
   text-shadow:
-    0 0 8px rgba(237, 200, 0, 0.4),
-    0 0 12px rgba(237, 200, 0, 0.2);
-  filter: drop-shadow(0 0 4px rgba(237, 200, 0, 0.3));
+    0 0 8px rgba(126, 234, 221, 0.6),
+    0 0 12px rgba(126, 234, 221, 0.3);
+  filter: drop-shadow(0 0 4px rgba(126, 234, 221, 0.4));
 }
 
 /* Accessibility - Screen reader only */
