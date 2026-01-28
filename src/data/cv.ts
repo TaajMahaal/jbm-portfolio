@@ -144,7 +144,7 @@ export const experiences: Experience[] = [
   {
     company: 'Laboratoire Xlim',
     role: 'Research Engineer',
-    period: '2011 - 2012',
+    period: '2011 - 2012 (1 year)',
     location: 'Limoges, France',
     description: 'Security specifications research and implementation',
     highlights: [
