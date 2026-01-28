@@ -216,6 +216,7 @@ export const skills: Skill[] = [
   { name: 'GraphQL', category: 'backend' },
   { name: 'REST APIs', category: 'backend' },
   { name: 'PHP', category: 'backend' },
+  { name: 'AI/ML', category: 'backend' },
 
   // Frontend
   { name: 'TypeScript', category: 'frontend' },
@@ -234,6 +235,7 @@ export const skills: Skill[] = [
   { name: 'Secure Coding', category: 'security' },
   { name: 'Reverse Engineering', category: 'security' },
   { name: 'Encrypted Data Analysis', category: 'security' },
+  { name: 'ISO 27001', category: 'security' },
 
   // Tools
   { name: 'Git', category: 'tools' },
