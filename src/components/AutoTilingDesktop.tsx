@@ -79,7 +79,7 @@ export default function AutoTilingDesktop() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.1 }}
-            className="flex-1 retro-window flex flex-col overflow-hidden"
+            className="flex-[1.2] retro-window flex flex-col overflow-hidden"
           >
             <div className="retro-title-bar">
               <span>~/about</span>
@@ -94,7 +94,7 @@ export default function AutoTilingDesktop() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.15 }}
-            className="flex-[1.5] retro-window flex flex-col overflow-hidden"
+            className="flex-[1.8] retro-window flex flex-col overflow-hidden"
           >
             <div className="retro-title-bar">
               <span>~/education</span>
