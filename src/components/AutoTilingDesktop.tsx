@@ -18,35 +18,35 @@ export default function AutoTilingDesktop() {
     <div className="h-screen flex flex-col">
       {/* Statusbar */}
       <div className="statusbar px-4 py-3 flex items-center justify-between relative z-30">
-        {/* Left: Title + Connection */}
-        <div className="flex items-center gap-8">
-          <div className="status-title-container">
-            <span className="status-title" data-text="jbm@portfolio">
-              jbm@portfolio
-            </span>
-          </div>
-          <span className={`text-xs font-semibold ${systemInfo.isOnline ? 'status-online' : 'text-red-400'}`}>
-            {systemInfo.isOnline ? '●' : '○'} {systemInfo.isOnline ? 'online' : 'offline'}
+        {/* Left: Title */}
+        <div className="status-title-container">
+          <span className="status-title" data-text="jbm@portfolio">
+            jbm@portfolio
           </span>
         </div>
 
-        {/* Center: City + Browser */}
-        <div className="flex items-center gap-6 text-sm text-teal-300">
+        {/* Center: Status + Location + Browser */}
+        <div className="flex items-center gap-4 text-xs text-teal-300">
           <div className="flex items-center gap-2">
-            <span>📍</span>
+            <span className="text-gray-400">Status:</span>
+            <span className={systemInfo.isOnline ? 'status-online' : 'text-red-400'}>
+              {systemInfo.isOnline ? 'online' : 'offline'}
+            </span>
+          </div>
+          <div className="statusbar-separator" />
+          <div className="flex items-center gap-2">
+            <span className="text-gray-400">Location:</span>
             <span>{systemInfo.city}</span>
           </div>
           <div className="statusbar-separator" />
           <div className="flex items-center gap-2">
-            <span>🌐</span>
+            <span className="text-gray-400">Browser:</span>
             <span>{systemInfo.browser}</span>
           </div>
         </div>
 
-        {/* Right: Resolution + Date + Time */}
-        <div className="flex items-center gap-4 text-sm terminal-text">
-          <span>{systemInfo.resolution}</span>
-          <div className="statusbar-separator" />
+        {/* Right: Date + Time */}
+        <div className="flex items-center gap-4 text-xs terminal-text">
           <span>{systemInfo.date}</span>
           <div className="statusbar-separator" />
           <span className="font-mono">{systemInfo.time}</span>
