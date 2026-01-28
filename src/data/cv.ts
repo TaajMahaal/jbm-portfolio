@@ -5,6 +5,7 @@ export interface Experience {
   location?: string;
   description?: string;
   highlights?: string[];
+  relatedSkills?: string[];
 }
 
 export interface Education {
@@ -60,6 +61,7 @@ export const experiences: Experience[] = [
       'End-to-end ownership of technical architecture and user experience',
       'Rapid prototyping and iteration with modern AI-assisted development',
     ],
+    relatedSkills: ['AI/ML', 'Go', 'Elixir', 'Phoenix', 'Ecto', 'PostgreSQL', 'Tailwind', 'JavaScript', 'Docker', 'Kubernetes', 'Terraform', 'AWS', 'AI CLI Tools'],
   },
   {
     company: 'Jump',
@@ -73,6 +75,7 @@ export const experiences: Experience[] = [
       'Driving technical decisions and best practices',
       'Mentoring engineers and fostering team growth',
     ],
+    relatedSkills: ['Microservices', 'Kubernetes', 'ISO 27001', 'Security Architecture', 'Go', 'Terraform', 'Docker', 'AWS'],
   },
   {
     company: 'Jump',
@@ -85,6 +88,7 @@ export const experiences: Experience[] = [
       'Infrastructure as Code with Terraform',
       'CI/CD pipeline optimization',
     ],
+    relatedSkills: ['Microservices', 'Kubernetes', 'Terraform', 'Terragrunt', 'Docker', 'Go', 'PostgreSQL', 'AWS', 'Jenkins', 'GitOps', 'Datadog', 'Grafana', 'Prometheus'],
   },
   {
     company: 'Neocase Software SAS',
@@ -96,6 +100,7 @@ export const experiences: Experience[] = [
       'RESTful API design and implementation',
       'Database optimization and performance tuning',
     ],
+    relatedSkills: ['REST APIs', 'SQL / No-SQL', 'PostgreSQL', 'JavaScript', 'HTML / CSS', 'Java / J2EE', 'Spring'],
   },
   {
     company: 'Aleda',
@@ -108,6 +113,7 @@ export const experiences: Experience[] = [
       'Continuous integration deployment preparation (GIT, Jenkins)',
       'Unit and functional testing',
     ],
+    relatedSkills: ['Java / J2EE', 'Spring', 'Primefaces', 'REST APIs', 'Jenkins', 'GitHub'],
   },
   {
     company: 'DGSI',
@@ -120,6 +126,7 @@ export const experiences: Experience[] = [
       'Computing infrastructure management',
       'Development and maintenance of web monitoring interface (HTML/CSS, PHP, SQL, JQuery)',
     ],
+    relatedSkills: ['Digital Forensics', 'Encrypted Data Analysis', 'Cryptography', 'PHP', 'SQL / No-SQL', 'HTML / CSS', 'JavaScript'],
   },
   {
     company: 'Arya Security (AVRUL - Incubator)',
@@ -132,6 +139,7 @@ export const experiences: Experience[] = [
       'Website development (HTML / CSS)',
       'Full project lifecycle management',
     ],
+    relatedSkills: ['Java / J2EE', 'HTML / CSS', 'Security Architecture', 'Secure Coding'],
   },
   {
     company: 'Laboratoire Xlim',
@@ -143,6 +151,7 @@ export const experiences: Experience[] = [
       'Security specifications analysis and implementation (Java)',
       'High-level JavaCard framework development (Java)',
     ],
+    relatedSkills: ['Java / J2EE', 'JavaCard', 'Security Architecture', 'Cryptography'],
   },
   {
     company: 'SFR',
@@ -154,6 +163,7 @@ export const experiences: Experience[] = [
       'Virtual machine hardening for SIM cards (C)',
       'Adaptive security model performance impact study',
     ],
+    relatedSkills: ['C', 'Security Architecture', 'Cryptography'],
   },
   {
     company: 'SFR',
@@ -165,6 +175,7 @@ export const experiences: Experience[] = [
       'Fault injection simulator implementation for smart cards (Java)',
       'Comparative performance analysis of innovative countermeasures (Java)',
     ],
+    relatedSkills: ['Java / J2EE', 'Security Architecture', 'Reverse Engineering'],
   },
 ];
 

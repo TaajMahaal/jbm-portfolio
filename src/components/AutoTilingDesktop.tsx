@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { profile, experiences, skills, education, publications } from '../data/cv';
+import { profile, experiences, skills, education, publications, type Experience } from '../data/cv';
 import { useSystemInfo } from '../hooks/useSystemInfo';
 import SyncedWindow from './SyncedWindow';
 
@@ -12,6 +12,7 @@ interface Pane {
 
 export default function AutoTilingDesktop() {
   const systemInfo = useSystemInfo();
+  const [hoveredExperience, setHoveredExperience] = React.useState<Experience | null>(null);
 
   return (
     <div className="h-screen flex flex-col">
@@ -68,7 +69,7 @@ export default function AutoTilingDesktop() {
             <span>~/experience</span>
           </div>
           <div className="flex-1 overflow-auto content-padding">
-            <WorkContent showAll />
+            <WorkContent showAll onHoverExperience={setHoveredExperience} />
           </div>
         </SyncedWindow>
 
@@ -118,7 +119,7 @@ export default function AutoTilingDesktop() {
               <span>~/skills</span>
             </div>
             <div className="flex-1 overflow-auto content-padding">
-              <SkillsContent />
+              <SkillsContent hoveredExperience={hoveredExperience} />
             </div>
           </SyncedWindow>
 
@@ -431,7 +432,7 @@ function AboutContent() {
   );
 }
 
-function WorkContent({ showAll = false }: { showAll?: boolean }) {
+function WorkContent({ showAll = false, onHoverExperience }: { showAll?: boolean; onHoverExperience: (exp: Experience | null) => void }) {
   const experiencesToShow = showAll ? experiences : experiences.slice(0, 4);
   const timelineRef = React.useRef<HTMLDivElement>(null);
 
@@ -442,7 +443,12 @@ function WorkContent({ showAll = false }: { showAll?: boolean }) {
         <div className="timeline-gradient-line absolute left-6 top-2 -bottom-2 w-px pointer-events-none"></div>
 
         {experiencesToShow.map((exp, index) => (
-          <div key={index} className="relative pl-12">
+          <div
+            key={index}
+            className="relative pl-12 cursor-pointer transition-opacity duration-200"
+            onMouseEnter={() => onHoverExperience(exp)}
+            onMouseLeave={() => onHoverExperience(null)}
+          >
             {/* Circle on timeline */}
             <div data-timeline-point className="absolute left-5 top-2 w-2 h-2 rounded-full z-10" style={{backgroundColor: '#edc800', boxShadow: '0 0 10px rgba(237, 200, 0, 0.6)'}} />
             <h3 className="text-sm font-bold text-gold-400">{exp.role}</h3>
@@ -511,7 +517,7 @@ function EducationContent() {
   );
 }
 
-function SkillsContent() {
+function SkillsContent({ hoveredExperience }: { hoveredExperience: Experience | null }) {
   const groupedSkills = skills.reduce((acc, skill) => {
     if (!acc[skill.category]) {
       acc[skill.category] = [];
@@ -529,6 +535,8 @@ function SkillsContent() {
     design: 'Design',
   };
 
+  const highlightedSkills = hoveredExperience?.relatedSkills || [];
+
   return (
     <div className="space-y-4 text-teal-100 h-full overflow-y-auto">
       <h2 className="section-header holo-text">Skills</h2>
@@ -540,11 +548,23 @@ function SkillsContent() {
               {categoryLabels[category] || category}
             </h3>
             <div className="flex flex-wrap gap-2">
-              {skillList.map((skillName, index) => (
-                <span key={index} className="skill-badge">
-                  {skillName}
-                </span>
-              ))}
+              {skillList.map((skillName, index) => {
+                const isHighlighted = highlightedSkills.includes(skillName);
+                return (
+                  <span
+                    key={index}
+                    className={`skill-badge transition-all duration-200 ${
+                      hoveredExperience
+                        ? isHighlighted
+                          ? 'ring-2 ring-gold-400 bg-gold-400/20 scale-105'
+                          : 'opacity-30'
+                        : ''
+                    }`}
+                  >
+                    {skillName}
+                  </span>
+                );
+              })}
             </div>
           </div>
         ))}
