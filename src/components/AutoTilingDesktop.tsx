@@ -445,7 +445,7 @@ function WorkContent({ showAll = false, onHoverExperience }: { showAll?: boolean
         {experiencesToShow.map((exp, index) => (
           <div
             key={index}
-            className="relative pl-12 cursor-pointer transition-opacity duration-200"
+            className="relative pl-12 cursor-pointer transition-all duration-200 rounded-lg -ml-2 -mr-2 px-2 py-1 hover:bg-teal-500/5 hover:shadow-lg hover:shadow-teal-500/10"
             onMouseEnter={() => onHoverExperience(exp)}
             onMouseLeave={() => onHoverExperience(null)}
           >
