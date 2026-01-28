@@ -348,7 +348,7 @@ function AboutContent() {
         </div>
 
         <div className="mt-4 pt-4 border-t border-teal-500/20">
-          <h3 className="text-xs font-bold text-gold-400 mb-2">Core Expertise</h3>
+          <h3 className="text-xsm font-bold text-gold-400 mb-2">Core Expertise</h3>
           <div className="flex flex-wrap gap-2">
             <span className="skill-badge">
               Microservices
@@ -369,11 +369,11 @@ function AboutContent() {
         </div>
 
         <div className="mt-4 pt-4 border-t border-teal-500/20">
-          <h3 className="text-xs font-bold text-gold-400 mb-3">Contact</h3>
+          <h3 className="text-xsm font-bold text-gold-400 mb-3">Contact</h3>
           <div className="space-y-2">
             <div className="flex items-center gap-2">
               <span className="text-teal-400">→</span>
-              <a href={`mailto:${profile.email}`} className="text-xs text-teal-300 hover:text-gold-400 transition-colors">
+              <a href={`mailto:${profile.email}`} className="text-xsm text-teal-300 hover:text-gold-400 transition-colors">
                 {profile.email}
               </a>
             </div>
@@ -383,7 +383,7 @@ function AboutContent() {
                 href={`https://${profile.linkedin}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-teal-300 hover:text-gold-400 transition-colors"
+                className="text-xsm text-teal-300 hover:text-gold-400 transition-colors"
               >
                 LinkedIn Profile
               </a>
@@ -434,36 +434,29 @@ function WorkContent({ showAll = false }: { showAll?: boolean }) {
 }
 
 function EducationContent() {
+  const timelineRef = React.useRef<HTMLDivElement>(null);
+
   return (
     <div className="space-y-4 text-teal-100 h-full overflow-y-auto">
       <h2 className="section-header holo-text">Education</h2>
 
-      <div className="space-y-4">
-        {education.map((edu, index) => (
-          <div key={index} className="relative pl-4 border-l-2 border-teal-500/30">
-            <div className="absolute left-0 top-0 w-2 h-2 bg-gold-400 rounded-full -translate-x-[5px]"
-                 style={{boxShadow: '0 0 10px rgba(237, 200, 0, 0.6)'}} />
-            <h3 className="text-sm font-bold text-gold-400">{edu.degree}</h3>
-            <p className="text-xs text-gray-400">{edu.institution}</p>
-            <p className="text-xs text-gray-500 mb-2">{edu.year} • {edu.location}</p>
+      <div ref={timelineRef} className="relative space-y-5 pb-4 overflow-visible">
+        {/* Timeline line avec gradient animé */}
+        <div className="timeline-gradient-line absolute left-[24px] top-2 bottom-[-8px] w-px pointer-events-none"></div>
 
-            <div className="mt-2 space-y-1">
-              <div className="text-xs text-gray-400">
-                <span className="text-teal-400">→</span> Security Specifications
-              </div>
-              <div className="text-xs text-gray-400">
-                <span className="text-teal-400">→</span> Cryptography
-              </div>
-              <div className="text-xs text-gray-400">
-                <span className="text-teal-400">→</span> Secure Systems Design
-              </div>
-            </div>
+        {education.map((edu, index) => (
+          <div key={index} className="relative pl-12">
+            {/* Circle on timeline */}
+            <div data-timeline-point className="absolute left-[20px] top-2 w-2 h-2 rounded-full z-10" style={{backgroundColor: '#edc800', boxShadow: '0 0 10px rgba(237, 200, 0, 0.6)'}} />
+            <h3 className="text-sm font-bold text-gold-400">{edu.degree}</h3>
+            <p className="text-xsm text-gray-100">{edu.institution}</p>
+            <p className="text-xsm text-gray-400 mb-2">{edu.year} • {edu.location}</p>
           </div>
         ))}
       </div>
 
       <div className="mt-4 pt-4 border-t border-teal-500/20">
-        <h3 className="text-xs font-bold text-gold-400 mb-2">Languages</h3>
+        <h3 className="text-xsm font-bold text-gold-400 mb-2">Languages</h3>
         <div className="flex gap-2 flex-wrap">
           <span className="skill-badge">
             French (Native)
@@ -500,7 +493,7 @@ function SkillsContent() {
       <div className="space-y-4">
         {Object.entries(groupedSkills).map(([category, skillList]) => (
           <div key={category}>
-            <h3 className="text-xs font-bold text-gold-400 mb-2 flex items-center gap-2">
+            <h3 className="text-xsm font-bold text-gold-400 mb-2 flex items-center gap-2">
               <span className="text-teal-400">▸</span>
               {categoryLabels[category] || category}
             </h3>
