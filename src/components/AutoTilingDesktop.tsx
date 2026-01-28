@@ -404,12 +404,12 @@ function WorkContent({ showAll = false }: { showAll?: boolean }) {
       <h2 className="section-header holo-text">Experience</h2>
       <div ref={timelineRef} className="relative space-y-5 pb-4 overflow-visible">
         {/* Timeline line avec gradient animé */}
-        <div className="timeline-gradient-line absolute left-[24px] top-2 bottom-[-8px] w-px pointer-events-none"></div>
+        <div className="timeline-gradient-line absolute left-6 top-2 -bottom-2 w-px pointer-events-none"></div>
 
         {experiencesToShow.map((exp, index) => (
           <div key={index} className="relative pl-12">
             {/* Circle on timeline */}
-            <div data-timeline-point className="absolute left-[20px] top-2 w-2 h-2 rounded-full z-10" style={{backgroundColor: '#edc800', boxShadow: '0 0 10px rgba(237, 200, 0, 0.6)'}} />
+            <div data-timeline-point className="absolute left-5 top-2 w-2 h-2 rounded-full z-10" style={{backgroundColor: '#edc800', boxShadow: '0 0 10px rgba(237, 200, 0, 0.6)'}} />
             <h3 className="text-sm font-bold text-gold-400">{exp.role}</h3>
             <p className="text-xsm text-gray-100">{exp.company}</p>
             <p className="text-xsm text-gray-400 mb-2">{exp.period}</p>
@@ -442,12 +442,12 @@ function EducationContent() {
 
       <div ref={timelineRef} className="relative space-y-5 pb-4 overflow-visible">
         {/* Timeline line avec gradient animé */}
-        <div className="timeline-gradient-line absolute left-[24px] top-2 bottom-[-8px] w-px pointer-events-none"></div>
+        <div className="timeline-gradient-line absolute left-6 top-2 -bottom-2 w-px pointer-events-none"></div>
 
         {education.map((edu, index) => (
           <div key={index} className="relative pl-12">
             {/* Circle on timeline */}
-            <div data-timeline-point className="absolute left-[20px] top-2 w-2 h-2 rounded-full z-10" style={{backgroundColor: '#edc800', boxShadow: '0 0 10px rgba(237, 200, 0, 0.6)'}} />
+            <div data-timeline-point className="absolute left-5 top-2 w-2 h-2 rounded-full z-10" style={{backgroundColor: '#edc800', boxShadow: '0 0 10px rgba(237, 200, 0, 0.6)'}} />
             <h3 className="text-sm font-bold text-gold-400">{edu.degree}</h3>
             <p className="text-xsm text-gray-100">{edu.institution}</p>
             <p className="text-xsm text-gray-400 mb-2">{edu.year} • {edu.location}</p>
