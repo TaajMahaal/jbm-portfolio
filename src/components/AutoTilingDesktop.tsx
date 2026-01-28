@@ -318,24 +318,24 @@ function AboutContent() {
       <h2 className="text-xl font-bold mb-4 holo-text">{profile.name}</h2>
 
       <div className="space-y-3 text-sm leading-relaxed">
-        <div className="flex items-start gap-2">
-          <span className="text-gold-400 mt-1">▸</span>
+        <div className="flex items-center gap-2">
+          <span className="text-gold-400">▸</span>
           <div>
             <span className="text-gray-400">role: </span>
             <span className="text-teal-300">{profile.title}</span>
           </div>
         </div>
 
-        <div className="flex items-start gap-2">
-          <span className="text-gold-400 mt-1">▸</span>
+        <div className="flex items-center gap-2">
+          <span className="text-gold-400">▸</span>
           <div>
             <span className="text-gray-400">subtitle: </span>
             <span className="text-teal-300">{profile.subtitle}</span>
           </div>
         </div>
 
-        <div className="flex items-start gap-2">
-          <span className="text-gold-400 mt-1">▸</span>
+        <div className="flex items-center gap-2">
+          <span className="text-gold-400">▸</span>
           <div>
             <span className="text-gray-400">location: </span>
             <span className="text-teal-300">{profile.location}</span>
@@ -370,13 +370,13 @@ function AboutContent() {
         <div className="mt-4 pt-4 border-t border-teal-500/20">
           <h3 className="text-xs font-bold text-gold-400 mb-3">Contact</h3>
           <div className="space-y-2">
-            <div className="flex items-start gap-2">
+            <div className="flex items-center gap-2">
               <span className="text-teal-400">→</span>
               <a href={`mailto:${profile.email}`} className="text-xs text-teal-300 hover:text-gold-400 transition-colors">
                 {profile.email}
               </a>
             </div>
-            <div className="flex items-start gap-2">
+            <div className="flex items-center gap-2">
               <span className="text-teal-400">→</span>
               <a
                 href={`https://${profile.linkedin}`}
@@ -462,28 +462,6 @@ function EducationContent() {
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="mt-6 pt-4 border-t border-teal-500/20">
-        <h3 className="text-xs font-bold text-gold-400 mb-3">Certifications & Expertise</h3>
-        <div className="space-y-2 text-xs text-gray-400">
-          <div className="flex items-start gap-2">
-            <span className="text-teal-400 mt-0.5">✓</span>
-            <span>Kubernetes & Cloud Native Technologies</span>
-          </div>
-          <div className="flex items-start gap-2">
-            <span className="text-teal-400 mt-0.5">✓</span>
-            <span>Microservices Architecture</span>
-          </div>
-          <div className="flex items-start gap-2">
-            <span className="text-teal-400 mt-0.5">✓</span>
-            <span>Infrastructure as Code (Terraform)</span>
-          </div>
-          <div className="flex items-start gap-2">
-            <span className="text-teal-400 mt-0.5">✓</span>
-            <span>Digital Forensics & Security Analysis</span>
-          </div>
-        </div>
       </div>
 
       <div className="mt-4 pt-4 border-t border-teal-500/20">
