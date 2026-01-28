@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useReducedMotion } from '../hooks/useReducedMotion';
 
 // Génère les points d'un hexagone
 const hexPoints = (cx: number, cy: number, size: number) => {
@@ -13,11 +14,17 @@ const hexPoints = (cx: number, cy: number, size: number) => {
 };
 
 export default function HexagonalBackground() {
+  const prefersReducedMotion = useReducedMotion();
   const svgRef = useRef<SVGSVGElement>(null);
   const [dimensions] = React.useState({
     width: typeof window !== 'undefined' ? window.innerWidth : 1920,
     height: typeof window !== 'undefined' ? window.innerHeight : 1080
   });
+
+  // Si l'utilisateur préfère le mouvement réduit, on ne montre pas les animations
+  if (prefersReducedMotion) {
+    return null;
+  }
 
   // Génère hexagones répartis sur toute la surface - UNE SEULE FOIS
   const hexagons = React.useMemo(() => {

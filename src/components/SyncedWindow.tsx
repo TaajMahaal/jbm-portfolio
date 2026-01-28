@@ -1,14 +1,11 @@
 import React, { forwardRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion, type MotionProps } from 'framer-motion';
 import { useSynchronizedBorder } from '../hooks/useSynchronizedBorder';
 
-interface SyncedWindowProps {
+interface SyncedWindowProps extends Omit<MotionProps, 'children' | 'ref'> {
   children: React.ReactNode;
   className?: string;
-  initial?: any;
-  animate?: any;
-  transition?: any;
-  [key: string]: any;
+  style?: React.CSSProperties;
 }
 
 const SyncedWindow = forwardRef<HTMLDivElement, SyncedWindowProps>(
@@ -29,9 +26,8 @@ const SyncedWindow = forwardRef<HTMLDivElement, SyncedWindowProps>(
         className={className}
         style={{
           ...style,
-          // @ts-ignore - CSS custom property
-          '--border-bg-position': backgroundPosition,
-        } as any}
+          ['--border-bg-position' as string]: backgroundPosition,
+        } as React.CSSProperties}
         {...motionProps}
       >
         {children}

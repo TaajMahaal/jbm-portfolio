@@ -672,3 +672,34 @@ kbd {
     0 0 12px rgba(237, 200, 0, 0.2);
   filter: drop-shadow(0 0 4px rgba(237, 200, 0, 0.3));
 }
+
+/* Accessibility - Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Accessibility - Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Disable SVG animations */
+  svg animate,
+  svg animateTransform {
+    display: none;
+  }
+}

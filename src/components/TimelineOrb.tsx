@@ -1,12 +1,19 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { useReducedMotion } from '../hooks/useReducedMotion';
 
 interface TimelineOrbProps {
   containerRef: React.RefObject<HTMLDivElement | null>;
 }
 
 export default function TimelineOrb({ containerRef }: TimelineOrbProps) {
+  const prefersReducedMotion = useReducedMotion();
   const [animationName, setAnimationName] = useState<string>('');
   const styleRef = useRef<HTMLStyleElement | null>(null);
+
+  // Si l'utilisateur préfère le mouvement réduit, on ne montre pas l'orbe animée
+  if (prefersReducedMotion) {
+    return null;
+  }
 
   useEffect(() => {
     const updateAnimation = () => {
@@ -34,10 +41,6 @@ export default function TimelineOrb({ containerRef }: TimelineOrbProps) {
       const pauseDuration = 5; // 5% pause - longer to see it stop
       const moveDuration = 6; // 6% to move - slower, smoother
       const segmentDuration = pauseDuration + moveDuration;
-
-      console.log('Timeline positions (bottom to top):', positions);
-      console.log('Pause duration:', pauseDuration, '%, Move duration:', moveDuration, '%');
-      console.log('Segment duration:', segmentDuration, '%');
 
       let keyframes = '';
 
@@ -147,10 +150,6 @@ export default function TimelineOrb({ containerRef }: TimelineOrbProps) {
           top: ${positions[0]}px;
         }
       `;
-
-      console.log('Top percent:', topPercent);
-      console.log('Final percent:', finalPercent);
-      console.log('Generated keyframes length:', keyframes.length);
 
       // Create and inject style
       const animName = `timeline-orb-${Date.now()}`;

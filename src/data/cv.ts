@@ -24,7 +24,7 @@ export const profile = {
   title: 'Engineering Manager',
   subtitle: 'Senior Software Engineer & Tech Leader',
   location: 'Limoges, Nouvelle-Aquitaine, France',
-  email: 'jb.machemie@gmail.com',
+  email: 'jb.machemie@proton.me',
   linkedin: 'linkedin.com/in/jean-baptiste-machemie-6900a7181',
   tagline: 'Building scalable systems & leading engineering teams',
 };

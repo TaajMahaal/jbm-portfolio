@@ -263,6 +263,9 @@ Location: Limoges, France`;
   return (
     <div
       ref={terminalRef}
+      role="log"
+      aria-live="polite"
+      aria-label="Terminal interactif"
       className="h-full flex flex-col font-mono text-sm"
       onClick={() => inputRef.current?.focus()}
     >
@@ -284,7 +287,11 @@ Location: Limoges, France`;
       <form onSubmit={(e) => { e.preventDefault(); executeCommand(input); setInput(''); }} className="flex items-center mt-4">
         <span className="terminal-prompt">❯ </span>
         <div className="flex-1 ml-2 relative">
+          <label htmlFor="terminal-input" className="sr-only">
+            Ligne de commande
+          </label>
           <input
+            id="terminal-input"
             ref={inputRef}
             type="text"
             value={input}
@@ -293,7 +300,11 @@ Location: Limoges, France`;
             className="w-full bg-transparent outline-none terminal-text terminal-input-hidden-caret"
             autoFocus
             spellCheck="false"
+            aria-describedby="terminal-help"
           />
+          <span id="terminal-help" className="sr-only">
+            Tapez 'help' pour voir les commandes disponibles
+          </span>
           <span className="terminal-cursor-block" style={{ left: `${input.length * 0.6}em` }}></span>
         </div>
       </form>
