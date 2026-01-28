@@ -105,7 +105,7 @@ export const experiences: Experience[] = [
   {
     company: 'Aleda',
     role: 'Web Service Developer',
-    period: '2018',
+    period: '2018 (6 months)',
     location: 'Limoges, France',
     description: 'RESTful backend and frontend services development',
     highlights: [
@@ -156,7 +156,7 @@ export const experiences: Experience[] = [
   {
     company: 'SFR',
     role: 'Intern',
-    period: '2011',
+    period: '2011 (6 months)',
     location: 'Paris / Limoges, France',
     description: 'SIM card security research',
     highlights: [
@@ -168,7 +168,7 @@ export const experiences: Experience[] = [
   {
     company: 'SFR',
     role: 'Intern',
-    period: '2010',
+    period: '2010 (3 months)',
     location: 'Paris / Limoges, France',
     description: 'Smart card attack simulation',
     highlights: [
