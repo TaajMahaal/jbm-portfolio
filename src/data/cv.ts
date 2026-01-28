@@ -220,7 +220,6 @@ export const skills: Skill[] = [
   { name: 'Spring', category: 'backend' },
   { name: 'PostgreSQL', category: 'backend' },
   { name: 'SQL / No-SQL', category: 'backend' },
-  { name: 'Redis', category: 'backend' },
   { name: 'GraphQL', category: 'backend' },
   { name: 'REST APIs', category: 'backend' },
   { name: 'PHP', category: 'backend' },
@@ -251,6 +250,7 @@ export const skills: Skill[] = [
   { name: 'Postman', category: 'tools' },
   { name: 'Bruno', category: 'tools' },
   { name: 'Lens', category: 'tools' },
+  { name: 'AI CLI Tools', category: 'tools' },
 
   // Design
   { name: 'Photoshop', category: 'design' },
