@@ -48,9 +48,21 @@ export const coreSkills: string[] = [
 
 export const experiences: Experience[] = [
   {
+    company: 'Winch',
+    role: 'Senior Software Engineer',
+    period: 'Feb 2026 - Present',
+    description: 'Full-stack development of fintech platform from scratch with heavy AI integration',
+    highlights: [
+      'Multi-hat role spanning infrastructure, backend, frontend, design, and product',
+      'Building fintech tools from the ground up leveraging AI/ML capabilities',
+      'End-to-end ownership of technical architecture and user experience',
+      'Rapid prototyping and iteration with modern AI-assisted development',
+    ],
+  },
+  {
     company: 'Jump',
     role: 'Engineering Manager',
-    period: 'Oct 2023 - Present',
+    period: 'Oct 2023 - Jan 2026',
     description: 'Leading engineering teams, driving technical strategy and delivery',
     highlights: [
       'Managing cross-functional engineering teams',
@@ -280,13 +292,13 @@ export const publications: Publication[] = [
 export const easterEggs = {
   terminalCommands: [
     { cmd: 'whoami', response: 'jean-baptiste.machemie@portfolio:~$ Engineering Manager with a passion for scalable systems and team leadership' },
-    { cmd: 'history', response: '1. SFR - Smart Card Security Research (2010-2011)\n2. Laboratoire Xlim - Security Research Engineer (2011-2012)\n3. Arya Security - Project Leader (2012-2013)\n4. DGSI - Digital Forensics & Investigation (2013-2016)\n5. Aleda - Full-stack Developer (2018)\n6. Neocase - Full-stack Developer (2018-2021)\n7. Jump - Backend Engineer (2021-2023)\n8. Jump - Engineering Manager (2023-Present)\n\n// Building the future, one commit at a time' },
+    { cmd: 'history', response: '1. SFR - Smart Card Security Research (2010-2011)\n2. Laboratoire Xlim - Security Research Engineer (2011-2012)\n3. Arya Security - Project Leader (2012-2013)\n4. DGSI - Digital Forensics & Investigation (2013-2016)\n5. Aleda - Full-stack Developer (2018)\n6. Neocase - Full-stack Developer (2018-2021)\n7. Jump - Backend Engineer (2021-2023)\n8. Jump - Engineering Manager (2023-2026)\n9. Winch - Senior Software Engineer (2026-Present)\n\n// Building the future, one commit at a time' },
     { cmd: 'ls -la /secrets', response: 'drwxr-xr-x  2 jbm  staff    64 Jan 26 2024 .\ndrwxr-xr-x  6 jbm  staff   192 Jan 26 2024 ..\n-rw-r--r--  1 jbm  staff  1337 Jan 26 2024 kubernetes_mastery.txt\n-rw-r--r--  1 jbm  staff  2048 Jan 26 2024 security_expertise.enc\n-rw-r--r--  1 jbm  staff  3072 Jan 26 2024 cryptography_research.gpg\n-rw-r--r--  1 jbm  staff  1024 Jan 26 2024 javacard_framework.jar\n-rw-------  1 jbm  staff  4096 Jan 26 2024 leadership_notes.md\n-rw-r--r--  1 jbm  staff   512 Jan 26 2024 netkit_contribution.patch' },
     { cmd: 'cat .env', response: 'PASSION=engineering\nSKILL_LEVEL=senior\nLOCATION=limoges\nSTATUS=always_learning\nCOFFEE_REQUIRED=true\n# Secrets are meant to stay secret 🔐' },
     { cmd: 'hack.exe', response: 'ACCESS DENIED.\nJust kidding! But I did work at DGSI on:\n- Digital forensics & encrypted data analysis\n- Smart card security research\n- Reverse engineering\n\nNice try though 😉' },
     { cmd: 'sudo make me a sandwich', response: 'Okay.\n🥪 Sandwich made!\n\nBut seriously, with great power comes great responsibility.' },
-    { cmd: 'git log --reverse', response: 'commit 1a2b3c4d (2009)\n    feat: Netkit uml_dump module - first major open-source contribution\n\ncommit 2b3c4d5e (2010-2011)\n    feat: Smart card security research @ SFR\n\ncommit 3c4d5e6f (2011-2012)\n    feat: JavaCard framework & security specs @ Laboratoire Xlim\n\ncommit 4d5e6f7g (2012-2013)\n    feat: Arya Security project - automated security validator\n\ncommit 5e6f7g8h (2013-2016)\n    feat: Digital forensics & encrypted data analysis @ DGSI\n\ncommit 6f7g8h9i (2018)\n    feat: Full-stack development with J2EE & Spring @ Aleda\n\ncommit 7g8h9i0j (2018-2021)\n    feat: Enterprise SaaS platform development @ Neocase\n\ncommit 8h9i0j1k (2021-2023)\n    feat: Microservices & K8s infrastructure @ Jump\n\ncommit 9i0j1k2l (2023)\n    feat: Engineering Manager - Leading teams @ Jump\n\nHEAD -> main (2024)\n    feat: Building this fancy retro portfolio with Astro & React' },
-    { cmd: 'neofetch', response: '                    jbm@portfolio\n                    -------------\n   _____           OS: Engineering OS v2024.1\n  /     \\          Host: Limoges, France\n |  o_o |          Kernel: Leadership-6.0-stable\n  \\  >  /          Uptime: 13 years in tech\n  /     \\          Shell: bash 5.2.0\n /|     |\\         Packages: microservices, k8s, terraform\n/_|     |_\\        Theme: RetroSystem [dark]\n                   Icons: Phosphor Green\n                   Terminal: iTerm2\n                   CPU: Brain (8 cores)\n                   Memory: ∞ passion for tech' },
+    { cmd: 'git log --reverse', response: 'commit 1a2b3c4d (2009)\n    feat: Netkit uml_dump module - first major open-source contribution\n\ncommit 2b3c4d5e (2010-2011)\n    feat: Smart card security research @ SFR\n\ncommit 3c4d5e6f (2011-2012)\n    feat: JavaCard framework & security specs @ Laboratoire Xlim\n\ncommit 4d5e6f7g (2012-2013)\n    feat: Arya Security project - automated security validator\n\ncommit 5e6f7g8h (2013-2016)\n    feat: Digital forensics & encrypted data analysis @ DGSI\n\ncommit 6f7g8h9i (2018)\n    feat: Full-stack development with J2EE & Spring @ Aleda\n\ncommit 7g8h9i0j (2018-2021)\n    feat: Enterprise SaaS platform development @ Neocase\n\ncommit 8h9i0j1k (2021-2023)\n    feat: Microservices & K8s infrastructure @ Jump\n\ncommit 9i0j1k2l (2023-2026)\n    feat: Engineering Manager - Leading teams @ Jump\n\ncommit 0j1k2l3m (2026)\n    feat: Multi-hat full-stack fintech development @ Winch\n\nHEAD -> main (2026)\n    feat: Building this fancy retro portfolio with Astro & React' },
+    { cmd: 'neofetch', response: '                    jbm@portfolio\n                    -------------\n   _____           OS: Engineering OS v2026.1\n  /     \\          Host: Limoges, France\n |  o_o |          Kernel: Leadership-6.0-stable\n  \\  >  /          Uptime: 16 years in tech\n  /     \\          Shell: bash 5.2.0\n /|     |\\         Packages: microservices, k8s, terraform, ai\n/_|     |_\\        Theme: RetroSystem [dark]\n                   Icons: Phosphor Green\n                   Terminal: iTerm2\n                   CPU: Brain (8 cores)\n                   Memory: ∞ passion for tech' },
   ],
   konamiCode: 'Up, Up, Down, Down, Left, Right, Left, Right, B, A',
   hiddenMessage: 'If you found this in the source code, you know how to dig! Let\'s connect.',

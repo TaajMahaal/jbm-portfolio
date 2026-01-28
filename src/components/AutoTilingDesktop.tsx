@@ -401,7 +401,6 @@ function WorkContent({ showAll = false }: { showAll?: boolean }) {
 
   return (
     <div className="space-y-4 text-teal-100 h-full overflow-y-auto">
-      <h2 className="section-header holo-text">Experience</h2>
       <div ref={timelineRef} className="relative space-y-5 pb-4 overflow-visible">
         {/* Timeline line avec gradient animé */}
         <div className="timeline-gradient-line absolute left-6 top-2 -bottom-2 w-px pointer-events-none"></div>
