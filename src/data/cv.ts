@@ -123,7 +123,7 @@ export const experiences: Experience[] = [
   },
   {
     company: 'Arya Security (AVRUL - Incubator)',
-    role: 'Project Leader',
+    role: 'Founder',
     period: '2012 - 2013',
     location: 'Limoges, France',
     description: 'Complete technical and business development of Arya Security project',
