@@ -6,8 +6,7 @@ import CRTOverlay from './CRTOverlay';
 import KonamiCode from './KonamiCode';
 
 export default function App() {
-  // DEBUG: Boot screen temporairement désactivé
-  const [bootComplete, setBootComplete] = useState(true);
+  const [bootComplete, setBootComplete] = useState(false);
 
   return (
     <>
