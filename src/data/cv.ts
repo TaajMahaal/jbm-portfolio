@@ -29,21 +29,23 @@ export interface Publication {
 
 export const profile = {
   name: 'Jean-Baptiste Machemie',
-  title: 'Engineering Manager',
-  subtitle: 'Senior Software Engineer & Tech Leader',
+  title: 'Senior Software Engineer',
+  subtitle: 'Software Craftsman & AI Enthusiast',
   location: 'Limoges, Nouvelle-Aquitaine, France',
   email: 'jb.machemie@gmail.com',
   phone: '06.51.35.25.09',
   linkedin: 'linkedin.com/in/jean-baptiste-machemie-6900a7181',
-  tagline: 'Computer Security & Development - Building scalable systems',
+  tagline: 'Building scalable systems with security-first mindset',
 };
 
 export const coreSkills: string[] = [
-  'Microservices',
-  'Kubernetes',
-  'Terraform',
-  'Leadership',
-  'Architecture',
+  'Backend Architecture',
+  'API Design',
+  'Distributed Systems',
+  'Cloud-based Development',
+  'Security Architecture',
+  'AI Integration',
+  'Pragmatism',
 ];
 
 export const experiences: Experience[] = [

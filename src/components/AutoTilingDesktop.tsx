@@ -351,19 +351,25 @@ function AboutContent() {
           <h3 className="text-xsm font-bold text-gold-400 mb-2">Core Expertise</h3>
           <div className="flex flex-wrap gap-2">
             <span className="skill-badge">
-              Microservices
+              Backend Architecture
             </span>
             <span className="skill-badge">
-              Kubernetes
+              API Design
             </span>
             <span className="skill-badge">
-              Terraform
+              Distributed Systems
             </span>
             <span className="skill-badge">
-              Leadership
+              Cloud-based Development
             </span>
             <span className="skill-badge">
-              Architecture
+              Security Architecture
+            </span>
+            <span className="skill-badge">
+              AI Integration
+            </span>
+            <span className="skill-badge">
+              Pragmatism
             </span>
           </div>
         </div>
@@ -398,7 +404,7 @@ function AboutContent() {
               French (Native)
             </span>
             <span className="skill-badge">
-              English (Professional)
+              English (C1)
             </span>
           </div>
         </div>
@@ -485,9 +491,9 @@ function EducationContent() {
       </div>
 
       <div className="mt-4 pt-4 border-t border-teal-500/20">
-        <h3 className="text-xsm font-bold text-gold-400 mb-3">Publications & Projects</h3>
+        <h3 className="text-xsm font-bold text-gold-400 mb-3">Publications</h3>
         <div className="space-y-3">
-          {publications.map((pub, index) => (
+          {publications.filter(pub => pub.type !== 'project').map((pub, index) => (
             <div key={index} className="text-xsm">
               <div className="flex items-start gap-2">
                 <span className="text-teal-400 flex-shrink-0">→</span>
