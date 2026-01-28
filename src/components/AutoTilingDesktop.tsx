@@ -271,7 +271,7 @@ Location: Limoges, France`;
       className="h-full flex flex-col font-mono text-sm"
       onClick={() => inputRef.current?.focus()}
     >
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto overflow-x-hidden">
         {lines.map((line, index) => (
           <div key={index} className={line.type === 'error' ? 'text-red-400' : 'text-teal-300 text-shadow-teal'}>
             {line.type === 'input' ? (
@@ -316,7 +316,7 @@ Location: Limoges, France`;
 
 function AboutContent() {
   return (
-    <div className="space-y-4 text-teal-100 h-full overflow-y-auto">
+    <div className="space-y-4 text-teal-100 h-full overflow-y-auto overflow-x-hidden">
       <h2 className="text-xl font-bold mb-4 holo-text">{profile.name}</h2>
 
       <div className="space-y-3 text-sm leading-relaxed">
@@ -478,7 +478,7 @@ function EducationContent() {
   const timelineRef = React.useRef<HTMLDivElement>(null);
 
   return (
-    <div className="space-y-4 text-teal-100 h-full overflow-y-auto">
+    <div className="space-y-4 text-teal-100 h-full overflow-y-auto overflow-x-hidden">
       <h2 className="section-header holo-text">Education</h2>
 
       <div ref={timelineRef} className="relative space-y-5 pb-4 overflow-visible">
@@ -538,7 +538,7 @@ function SkillsContent({ hoveredExperience }: { hoveredExperience: Experience | 
   const highlightedSkills = hoveredExperience?.relatedSkills || [];
 
   return (
-    <div className="space-y-4 text-teal-100 h-full overflow-y-auto">
+    <div className="space-y-4 text-teal-100 h-full overflow-y-auto overflow-x-hidden">
       <h2 className="section-header holo-text">Skills</h2>
       <div className="space-y-4">
         {Object.entries(groupedSkills).map(([category, skillList]) => (
@@ -547,7 +547,7 @@ function SkillsContent({ hoveredExperience }: { hoveredExperience: Experience | 
               <span className="text-teal-400">▸</span>
               {categoryLabels[category] || category}
             </h3>
-            <div className="flex flex-wrap gap-2 p-1 -m-1">
+            <div className="flex flex-wrap gap-2 p-2 -m-2">
               {skillList.map((skillName, index) => {
                 const isHighlighted = highlightedSkills.includes(skillName);
                 return (
