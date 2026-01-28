@@ -206,10 +206,8 @@ export const skills: Skill[] = [
   // Backend
   { name: 'Microservices', category: 'backend' },
   { name: 'Go', category: 'backend' },
-  { name: 'Node.js', category: 'backend' },
   { name: 'Python', category: 'backend' },
   { name: 'Elixir', category: 'backend' },
-  { name: 'Phoenix', category: 'backend' },
   { name: 'Ecto', category: 'backend' },
   { name: 'Java / J2EE', category: 'backend' },
   { name: 'JavaCard', category: 'backend' },
@@ -230,6 +228,7 @@ export const skills: Skill[] = [
   // Frontend
   { name: 'JavaScript', category: 'frontend' },
   { name: 'HTML / CSS', category: 'frontend' },
+  { name: 'Phoenix', category: 'frontend' },
   { name: 'Tailwind', category: 'frontend' },
   { name: 'DaisyUI', category: 'frontend' },
   { name: 'Primefaces', category: 'frontend' },
