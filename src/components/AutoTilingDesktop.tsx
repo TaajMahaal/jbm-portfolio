@@ -479,8 +479,6 @@ function EducationContent() {
 
   return (
     <div className="space-y-4 text-teal-100 h-full overflow-y-auto overflow-x-hidden">
-      <h2 className="section-header holo-text">Education</h2>
-
       <div ref={timelineRef} className="relative space-y-5 pb-4 overflow-visible">
         {/* Timeline line avec gradient animé */}
         <div className="timeline-gradient-line absolute left-6 top-2 -bottom-2 w-px pointer-events-none"></div>
@@ -539,7 +537,6 @@ function SkillsContent({ hoveredExperience }: { hoveredExperience: Experience | 
 
   return (
     <div className="space-y-4 text-teal-100 h-full overflow-y-auto overflow-x-hidden">
-      <h2 className="section-header holo-text">Skills</h2>
       <div className="space-y-4">
         {Object.entries(groupedSkills).map(([category, skillList]) => (
           <div key={category}>
