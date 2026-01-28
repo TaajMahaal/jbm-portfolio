@@ -94,7 +94,6 @@ export const experiences: Experience[] = [
     highlights: [
       'Full-stack development of SaaS platform',
       'RESTful API design and implementation',
-      'Frontend development with modern frameworks',
       'Database optimization and performance tuning',
     ],
   },
