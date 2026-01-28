@@ -69,6 +69,7 @@ export const experiences: Experience[] = [
     highlights: [
       'Managing cross-functional engineering teams',
       'Architecting scalable microservices infrastructure',
+      'Achieved ISO 27001 certification for the company',
       'Driving technical decisions and best practices',
       'Mentoring engineers and fostering team growth',
     ],
