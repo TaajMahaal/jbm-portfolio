@@ -526,6 +526,7 @@ function SkillsContent() {
     frontend: 'Frontend',
     security: 'Security',
     tools: 'Tools',
+    design: 'Design',
   };
 
   return (

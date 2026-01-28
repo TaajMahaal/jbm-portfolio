@@ -16,7 +16,7 @@ export interface Education {
 
 export interface Skill {
   name: string;
-  category: 'backend' | 'frontend' | 'devops' | 'security' | 'tools';
+  category: 'backend' | 'frontend' | 'devops' | 'security' | 'tools' | 'design';
 }
 
 export interface Publication {
@@ -241,9 +241,11 @@ export const skills: Skill[] = [
   { name: 'Monitoring', category: 'tools' },
   { name: 'Agile', category: 'tools' },
   { name: 'Tests Unitaires', category: 'tools' },
-  { name: 'Photoshop', category: 'tools' },
-  { name: 'Illustrator', category: 'tools' },
-  { name: 'InDesign', category: 'tools' },
+
+  // Design
+  { name: 'Photoshop', category: 'design' },
+  { name: 'Illustrator', category: 'design' },
+  { name: 'InDesign', category: 'design' },
 ];
 
 export const publications: Publication[] = [
