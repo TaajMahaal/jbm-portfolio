@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { profile, experiences, skills, education } from '../data/cv';
+import { profile, experiences, skills, education, publications } from '../data/cv';
 import { useSystemInfo } from '../hooks/useSystemInfo';
 import SyncedWindow from './SyncedWindow';
 
@@ -390,6 +390,36 @@ function AboutContent() {
             </div>
           </div>
         </div>
+
+        <div className="mt-4 pt-4 border-t border-teal-500/20">
+          <h3 className="text-xsm font-bold text-gold-400 mb-2">Languages</h3>
+          <div className="flex gap-2 flex-wrap">
+            <span className="skill-badge">
+              French (Native)
+            </span>
+            <span className="skill-badge">
+              English (Professional)
+            </span>
+          </div>
+        </div>
+
+        <div className="mt-4 pt-4 border-t border-teal-500/20">
+          <h3 className="text-xsm font-bold text-gold-400 mb-2">Hobbies</h3>
+          <div className="flex gap-2 flex-wrap">
+            <span className="skill-badge">
+              Video Games
+            </span>
+            <span className="skill-badge">
+              Kayaking
+            </span>
+            <span className="skill-badge">
+              Martial Arts
+            </span>
+            <span className="skill-badge">
+              Woodworking
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -455,14 +485,20 @@ function EducationContent() {
       </div>
 
       <div className="mt-4 pt-4 border-t border-teal-500/20">
-        <h3 className="text-xsm font-bold text-gold-400 mb-2">Languages</h3>
-        <div className="flex gap-2 flex-wrap">
-          <span className="skill-badge">
-            French (Native)
-          </span>
-          <span className="skill-badge">
-            English (Professional)
-          </span>
+        <h3 className="text-xsm font-bold text-gold-400 mb-3">Publications & Projects</h3>
+        <div className="space-y-3">
+          {publications.map((pub, index) => (
+            <div key={index} className="text-xsm">
+              <div className="flex items-start gap-2">
+                <span className="text-teal-400 flex-shrink-0">→</span>
+                <div>
+                  <span className="text-gray-300 font-semibold">{pub.title}</span>
+                  <span className="text-gray-500 ml-2">({pub.year})</span>
+                  <p className="text-gray-400 mt-0.5">{pub.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
