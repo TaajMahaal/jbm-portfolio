@@ -547,7 +547,7 @@ function SkillsContent({ hoveredExperience }: { hoveredExperience: Experience | 
               <span className="text-teal-400">▸</span>
               {categoryLabels[category] || category}
             </h3>
-            <div className="flex flex-wrap gap-2 p-2 -m-2">
+            <div className="flex flex-wrap gap-2 p-3">
               {skillList.map((skillName, index) => {
                 const isHighlighted = highlightedSkills.includes(skillName);
                 return (
