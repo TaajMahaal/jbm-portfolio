@@ -759,9 +759,9 @@ kbd {
   padding: 0.5rem 0.75rem; /* px-3 py-2 */
   font-size: 0.75rem; /* text-xs */
   border-radius: 0.25rem; /* rounded */
-  background: rgba(126, 234, 221, 0.25);
+  background: rgba(26, 83, 92, 0.6);
   border: 1px solid rgba(126, 234, 221, 0.5);
-  color: #ccfbf1;
+  color: #a0f0e5;
   transition: all 0.3s ease;
 }
 
