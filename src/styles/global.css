@@ -758,7 +758,7 @@ kbd {
 .skill-badge {
   padding: 0.5rem 0.75rem; /* px-3 py-2 */
   font-size: 0.75rem; /* text-xs */
-  border-radius: 0.5rem; /* rounded-lg */
+  border-radius: 0.25rem; /* rounded */
   background: rgba(126, 234, 221, 0.15);
   border: 1px solid rgba(126, 234, 221, 0.4);
   color: #7eeadd;
