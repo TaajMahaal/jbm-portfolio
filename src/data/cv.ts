@@ -66,7 +66,7 @@ export const experiences: Experience[] = [
   {
     company: 'Jump',
     role: 'Engineering Manager',
-    period: 'Oct 2023 - Jan 2026',
+    period: 'Oct 2023 - Jan 2026 (2 years 3 months)',
     description: 'Leading engineering teams, driving technical strategy and delivery',
     highlights: [
       'Managing cross-functional engineering teams',
@@ -80,7 +80,7 @@ export const experiences: Experience[] = [
   {
     company: 'Jump',
     role: 'Backend Engineer',
-    period: 'Sep 2021 - Oct 2023',
+    period: 'Sep 2021 - Oct 2023 (2 years 1 month)',
     description: 'Building robust backend systems and infrastructure',
     highlights: [
       'Designed and implemented microservices architecture',
@@ -93,7 +93,7 @@ export const experiences: Experience[] = [
   {
     company: 'Neocase Software SAS',
     role: 'Full-stack Developer',
-    period: 'Dec 2018 - Sep 2021',
+    period: 'Dec 2018 - Sep 2021 (2 years 9 months)',
     description: 'Developing enterprise software solutions',
     highlights: [
       'Full-stack development of SaaS platform',
@@ -118,7 +118,7 @@ export const experiences: Experience[] = [
   {
     company: 'DGSI',
     role: 'Specialized Technical Agent',
-    period: '2013 - 2016',
+    period: '2013 - 2016 (3 years)',
     location: 'Levallois, France',
     description: 'Digital investigation and specialized technical operations',
     highlights: [
@@ -131,7 +131,7 @@ export const experiences: Experience[] = [
   {
     company: 'Arya Security (AVRUL - Incubator)',
     role: 'Founder',
-    period: '2012 - 2013',
+    period: '2012 - 2013 (1 year)',
     location: 'Limoges, France',
     description: 'Complete technical and business development of Arya Security project',
     highlights: [
