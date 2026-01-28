@@ -195,20 +195,29 @@ export const skills: Skill[] = [
   { name: 'Docker', category: 'devops' },
   { name: 'Terraform', category: 'devops' },
   { name: 'AWS', category: 'devops' },
-  { name: 'GCP', category: 'devops' },
-  { name: 'CI/CD', category: 'devops' },
   { name: 'GitOps', category: 'devops' },
   { name: 'Jenkins', category: 'devops' },
+  { name: 'Datadog', category: 'devops' },
+  { name: 'Grafana', category: 'devops' },
+  { name: 'Prometheus', category: 'devops' },
+  { name: 'Loki', category: 'devops' },
+  { name: 'OpenTelemetry', category: 'devops' },
 
   // Backend
   { name: 'Microservices', category: 'backend' },
   { name: 'Go', category: 'backend' },
   { name: 'Node.js', category: 'backend' },
   { name: 'Python', category: 'backend' },
+  { name: 'Elixir', category: 'backend' },
+  { name: 'Phoenix', category: 'backend' },
+  { name: 'Ecto', category: 'backend' },
   { name: 'Java / J2EE', category: 'backend' },
   { name: 'JavaCard', category: 'backend' },
   { name: 'C', category: 'backend' },
   { name: 'C++', category: 'backend' },
+  { name: 'C#', category: 'backend' },
+  { name: 'ASP.NET MVC', category: 'backend' },
+  { name: 'Razor', category: 'backend' },
   { name: 'Spring', category: 'backend' },
   { name: 'PostgreSQL', category: 'backend' },
   { name: 'SQL / No-SQL', category: 'backend' },
@@ -219,13 +228,10 @@ export const skills: Skill[] = [
   { name: 'AI/ML', category: 'backend' },
 
   // Frontend
-  { name: 'TypeScript', category: 'frontend' },
   { name: 'JavaScript', category: 'frontend' },
-  { name: 'React', category: 'frontend' },
-  { name: 'Vue.js', category: 'frontend' },
-  { name: 'Next.js', category: 'frontend' },
   { name: 'HTML / CSS', category: 'frontend' },
-  { name: 'JQuery', category: 'frontend' },
+  { name: 'Tailwind', category: 'frontend' },
+  { name: 'DaisyUI', category: 'frontend' },
   { name: 'Primefaces', category: 'frontend' },
 
   // Security
@@ -236,13 +242,11 @@ export const skills: Skill[] = [
   { name: 'Reverse Engineering', category: 'security' },
   { name: 'Encrypted Data Analysis', category: 'security' },
   { name: 'ISO 27001', category: 'security' },
+  { name: 'Auth0', category: 'security' },
 
   // Tools
   { name: 'Git', category: 'tools' },
-  { name: 'Linux', category: 'tools' },
-  { name: 'Monitoring', category: 'tools' },
-  { name: 'Agile', category: 'tools' },
-  { name: 'Tests Unitaires', category: 'tools' },
+  { name: 'GitHub', category: 'tools' },
 
   // Design
   { name: 'Photoshop', category: 'design' },
