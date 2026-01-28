@@ -442,9 +442,9 @@
     display: inline-block;
     width: 0.6em;
     height: 1.2em;
-    background: linear-gradient(135deg, #4fd1c5, #edc800);
+    background: #7eeadd;
     animation: blink 1s step-end infinite;
-    box-shadow: 0 0 10px rgba(79, 209, 197, 0.6);
+    box-shadow: 0 0 10px rgba(126, 234, 221, 0.6);
     pointer-events: none;
   }
 
@@ -761,7 +761,7 @@ kbd {
   border-radius: 0.25rem; /* rounded */
   background: rgba(126, 234, 221, 0.15);
   border: 1px solid rgba(126, 234, 221, 0.4);
-  color: #7eeadd;
+  color: #ccfbf1;
   transition: all 0.3s ease;
 }
 
