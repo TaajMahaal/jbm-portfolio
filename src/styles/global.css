@@ -561,15 +561,15 @@ kbd {
 .timeline-gradient-line {
   background: linear-gradient(
     180deg,
-    rgba(126, 234, 221, 0.8) 0%,
-    rgba(180, 255, 245, 1) 25%,
-    rgba(255, 255, 255, 1) 40%,
-    rgba(255, 255, 255, 1) 60%,
-    rgba(180, 255, 245, 1) 75%,
-    rgba(126, 234, 221, 0.8) 100%
+    rgba(79, 209, 197, 0.6) 0%,
+    rgba(79, 209, 197, 0.8) 40%,
+    rgba(255, 240, 100, 1) 49%,
+    rgba(255, 240, 100, 1) 51%,
+    rgba(79, 209, 197, 0.8) 60%,
+    rgba(79, 209, 197, 0.6) 100%
   );
   background-size: 100% 200%;
-  animation: timeline-gradient-flow 8s ease-in-out infinite;
+  animation: timeline-gradient-flow 12s ease-in-out infinite;
   z-index: 10;
 }
 
