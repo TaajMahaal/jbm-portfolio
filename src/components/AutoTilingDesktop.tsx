@@ -540,7 +540,7 @@ function SkillsContent() {
               {categoryLabels[category] || category}
             </h3>
             <div className="flex flex-wrap gap-2">
-              {skillList.slice(0, 8).map((skillName, index) => (
+              {skillList.map((skillName, index) => (
                 <span key={index} className="skill-badge">
                   {skillName}
                 </span>

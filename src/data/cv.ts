@@ -194,6 +194,7 @@ export const skills: Skill[] = [
   { name: 'Kubernetes', category: 'devops' },
   { name: 'Docker', category: 'devops' },
   { name: 'Terraform', category: 'devops' },
+  { name: 'Terragrunt', category: 'devops' },
   { name: 'AWS', category: 'devops' },
   { name: 'GitOps', category: 'devops' },
   { name: 'Jenkins', category: 'devops' },
