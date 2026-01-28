@@ -437,15 +437,15 @@ function WorkContent({ showAll = false, onHoverExperience }: { showAll?: boolean
   const timelineRef = React.useRef<HTMLDivElement>(null);
 
   return (
-    <div className="space-y-4 text-teal-100 h-full overflow-y-auto">
-      <div ref={timelineRef} className="relative space-y-5 pb-4 overflow-visible">
+    <div className="space-y-4 text-teal-100 h-full overflow-y-auto overflow-x-hidden">
+      <div ref={timelineRef} className="relative space-y-5 pb-4">
         {/* Timeline line avec gradient animé */}
         <div className="timeline-gradient-line absolute left-6 top-2 -bottom-2 w-px pointer-events-none"></div>
 
         {experiencesToShow.map((exp, index) => (
           <div
             key={index}
-            className="relative pl-12 cursor-pointer transition-all duration-200 rounded-lg -ml-2 -mr-2 px-2 hover:bg-teal-500/10 hover:shadow-lg hover:shadow-teal-500/20"
+            className="relative pl-12 cursor-pointer transition-all duration-200 rounded-lg px-2 hover:bg-teal-500/10 hover:shadow-lg hover:shadow-teal-500/20"
             onMouseEnter={() => onHoverExperience(exp)}
             onMouseLeave={() => onHoverExperience(null)}
           >
