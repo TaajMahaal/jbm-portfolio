@@ -32,7 +32,7 @@ export const profile = {
   title: 'Senior Software Engineer',
   subtitle: 'Software Craftsman & AI Enthusiast',
   location: 'Limoges, Nouvelle-Aquitaine, France',
-  email: 'jb.machemie@gmail.com',
+  email: 'jb.machemie@proton.me',
   phone: '06.51.35.25.09',
   linkedin: 'linkedin.com/in/jean-baptiste-machemie-6900a7181',
   tagline: 'Building scalable systems with security-first mindset',
