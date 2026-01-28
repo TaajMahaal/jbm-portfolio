@@ -761,7 +761,7 @@ kbd {
   border-radius: 0.25rem; /* rounded */
   background: rgba(126, 234, 221, 0.15);
   border: 1px solid rgba(126, 234, 221, 0.4);
-  color: #ccfbf1;
+  color: #9ff5ea;
   transition: all 0.3s ease;
 }
 
