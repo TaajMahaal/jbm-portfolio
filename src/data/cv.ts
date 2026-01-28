@@ -245,8 +245,12 @@ export const skills: Skill[] = [
   { name: 'Auth0', category: 'security' },
 
   // Tools
-  { name: 'Git', category: 'tools' },
   { name: 'GitHub', category: 'tools' },
+  { name: 'Notion', category: 'tools' },
+  { name: 'Linear', category: 'tools' },
+  { name: 'Postman', category: 'tools' },
+  { name: 'Bruno', category: 'tools' },
+  { name: 'Lens', category: 'tools' },
 
   // Design
   { name: 'Photoshop', category: 'design' },
