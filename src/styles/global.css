@@ -363,10 +363,8 @@
 
   .terminal-prompt::before {
     content: "$ ";
-    background: linear-gradient(135deg, #edc800, #ff6b35);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #edc800;
+    text-shadow: 0 0 10px rgba(237, 200, 0, 0.5);
     font-weight: bold;
   }
 
