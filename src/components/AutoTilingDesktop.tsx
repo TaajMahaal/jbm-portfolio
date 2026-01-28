@@ -63,7 +63,7 @@ export default function AutoTilingDesktop() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
-          className="w-1/3 retro-window flex flex-col overflow-hidden"
+          className="w-2/5 retro-window flex flex-col overflow-hidden"
         >
           <div className="retro-title-bar">
             <span>~/experience</span>
@@ -74,7 +74,7 @@ export default function AutoTilingDesktop() {
         </SyncedWindow>
 
         {/* Middle column: About + Education */}
-        <div className="w-1/3 flex flex-col gap-4">
+        <div className="w-[30%] flex flex-col gap-4">
           {/* About */}
           <SyncedWindow
             initial={{ opacity: 0, y: 20 }}
@@ -107,7 +107,7 @@ export default function AutoTilingDesktop() {
         </div>
 
         {/* Right column: Skills + Terminal */}
-        <div className="w-1/3 flex flex-col gap-4">
+        <div className="w-[30%] flex flex-col gap-4">
           {/* Skills */}
           <SyncedWindow
             initial={{ opacity: 0, x: 20 }}
@@ -445,7 +445,7 @@ function WorkContent({ showAll = false, onHoverExperience }: { showAll?: boolean
         {experiencesToShow.map((exp, index) => (
           <div
             key={index}
-            className="relative pl-12 cursor-pointer transition-all duration-200 rounded-lg -ml-2 -mr-2 px-2 py-1 hover:bg-teal-500/5 hover:shadow-lg hover:shadow-teal-500/10"
+            className="relative pl-12 cursor-pointer transition-all duration-200 rounded-lg -ml-2 -mr-2 px-2 hover:bg-teal-500/10 hover:shadow-lg hover:shadow-teal-500/20"
             onMouseEnter={() => onHoverExperience(exp)}
             onMouseLeave={() => onHoverExperience(null)}
           >
@@ -547,7 +547,7 @@ function SkillsContent({ hoveredExperience }: { hoveredExperience: Experience | 
               <span className="text-teal-400">▸</span>
               {categoryLabels[category] || category}
             </h3>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 p-1 -m-1">
               {skillList.map((skillName, index) => {
                 const isHighlighted = highlightedSkills.includes(skillName);
                 return (
@@ -556,7 +556,7 @@ function SkillsContent({ hoveredExperience }: { hoveredExperience: Experience | 
                     className={`skill-badge transition-all duration-200 ${
                       hoveredExperience
                         ? isHighlighted
-                          ? 'ring-2 ring-gold-400 bg-gold-400/20 scale-105'
+                          ? 'ring-2 ring-gold-400 bg-gold-400/20 scale-105 shadow-lg shadow-gold-400/30'
                           : 'opacity-30'
                         : ''
                     }`}
