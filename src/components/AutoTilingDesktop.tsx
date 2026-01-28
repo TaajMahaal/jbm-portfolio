@@ -45,8 +45,10 @@ export default function AutoTilingDesktop() {
           </div>
         </div>
 
-        {/* Right: Date + Time */}
+        {/* Right: Resolution + Date + Time */}
         <div className="flex items-center gap-4 text-xs terminal-text">
+          <span>{systemInfo.resolution}</span>
+          <div className="statusbar-separator" />
           <span>{systemInfo.date}</span>
           <div className="statusbar-separator" />
           <span className="font-mono">{systemInfo.time}</span>
