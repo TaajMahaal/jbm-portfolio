@@ -1,0 +1,32 @@
+[
+  {
+    "label": "dev: Start development server",
+    "command": "npm run dev",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "build: Build for production",
+    "command": "npm run build",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "preview: Preview production build",
+    "command": "npm run preview",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "type-check: Run TypeScript type checking",
+    "command": "npm run type-check",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": true
+  },
+  {
+    "label": "clean: Clear cache and build artifacts",
+    "command": "npm run clean",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false
+  }
+]

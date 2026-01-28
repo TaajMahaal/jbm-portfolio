@@ -1,23 +1,33 @@
 {
   "hooks": {
-    "postToolUse": [
+    "PreToolUse": [
       {
-        "name": "auto-format",
-        "match": {
-          "toolName": ["Edit", "Write"],
-          "filePattern": "**/*.{ts,tsx,js,jsx,css,astro,json,md}"
-        },
-        "command": "npx prettier --write {{file}}",
-        "continueOnError": true
-      },
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [[ \"{{file}}\" =~ \\.(env|key|pem)$ ]] || [[ \"{{file}}\" == */.env.* ]]; then echo '⚠️  Attempting to edit sensitive file. Please confirm.' && exit 1; fi"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
       {
-        "name": "type-check",
-        "match": {
-          "toolName": ["Edit", "Write"],
-          "filePattern": "**/*.{ts,tsx}"
-        },
-        "command": "npm run type-check",
-        "continueOnError": true
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [[ \"{{file}}\" =~ \\.(ts|tsx|js|jsx|css|astro|json|md)$ ]]; then npx prettier --write \"{{file}}\" 2>/dev/null || true; fi"
+          },
+          {
+            "type": "command",
+            "command": "if [[ \"{{file}}\" =~ \\.astro$ ]]; then npm run check 2>/dev/null || true; fi"
+          },
+          {
+            "type": "command",
+            "command": "npm run type-check 2>/dev/null || true"
+          }
+        ]
       }
     ]
   },

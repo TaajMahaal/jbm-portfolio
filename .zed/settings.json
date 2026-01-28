@@ -1,0 +1,54 @@
+{
+  "languages": {
+    "TypeScript": {
+      "formatter": "prettier",
+      "format_on_save": "on",
+      "tab_size": 2
+    },
+    "TSX": {
+      "formatter": "prettier",
+      "format_on_save": "on",
+      "tab_size": 2
+    },
+    "JavaScript": {
+      "formatter": "prettier",
+      "format_on_save": "on",
+      "tab_size": 2
+    },
+    "Astro": {
+      "formatter": "prettier",
+      "format_on_save": "on",
+      "tab_size": 2
+    },
+    "CSS": {
+      "formatter": "prettier",
+      "format_on_save": "on",
+      "tab_size": 2
+    }
+  },
+  "lsp": {
+    "typescript-language-server": {
+      "initialization_options": {
+        "preferences": {
+          "includeInlayParameterNameHints": "all",
+          "includeInlayParameterNameHintsWhenArgumentMatchesName": true,
+          "includeInlayFunctionParameterTypeHints": true,
+          "includeInlayVariableTypeHints": true,
+          "includeInlayPropertyDeclarationTypeHints": true,
+          "includeInlayFunctionLikeReturnTypeHints": true
+        }
+      }
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5"
+  },
+  "tab_size": 2,
+  "soft_wrap": "editor_width",
+  "formatter": "prettier",
+  "format_on_save": "on"
+}

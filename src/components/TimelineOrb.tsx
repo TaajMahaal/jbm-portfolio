@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 
 interface TimelineOrbProps {
-  containerRef: React.RefObject<HTMLDivElement>;
+  containerRef: React.RefObject<HTMLDivElement | null>;
 }
 
 export default function TimelineOrb({ containerRef }: TimelineOrbProps) {

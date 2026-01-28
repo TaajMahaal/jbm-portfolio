@@ -1,5 +1,9 @@
 # JBM Portfolio - Project Context
 
+## Communication Preference
+
+**Always communicate in French with the user. All responses, explanations, and interactions must be in French. Keep the tone light and informal. This is a Claude Code discovery project so please push some highlights on how to use you effectively when relevant, and only when relevant, don't spam unnecessary explanations.**
+
 ## Project Overview
 
 Personal portfolio website for Jean-Baptiste Machemie, Engineering Manager @ Jump. Features a unique tiling window manager interface with holographic gradients and a retro Unix aesthetic.
@@ -191,9 +195,9 @@ npm run clean     # Clear cache and build artifacts
 - ✅ Z-index issues with CRT effects
 - ✅ Terminal styling (removed Windows .EXE references)
 - ✅ Tiling layout (now 2x2 auto-tiling)
+- ✅ TypeScript errors in AutoTilingDesktop.tsx (RefObject type mismatch with TimelineOrb)
 
 ### Active
-- TypeScript errors in TilingDesktop.tsx (line 115) - needs fixing
 - No tests yet (could add Vitest)
 - No CI/CD pipeline yet (could add GitHub Actions)
 
@@ -285,7 +289,7 @@ This is a personal portfolio, but suggestions welcome:
 ## Contact
 
 **Jean-Baptiste Machemie**
-Email: jb.machemie@gmail.com
+Email: jb.machemie@proton.me
 LinkedIn: linkedin.com/in/jean-baptiste-machemie-6900a7181
 Location: Limoges, France
 

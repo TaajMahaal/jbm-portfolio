@@ -17,6 +17,9 @@ pnpm-debug.log*
 .env
 .env.production
 
+# MCP configuration (contains secrets)
+.mcp.json
+
 # macOS-specific files
 .DS_Store
 
@@ -27,10 +30,9 @@ pnpm-debug.log*
 *~
 *.swp
 *.swo
-.vscode/
 
 # Claude Code
 .claude/
 
 # Other temp files
-.mcp.json
+.vercel
