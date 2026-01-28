@@ -10,14 +10,12 @@ export function useSynchronizedBorder() {
 
       const rect = ref.current.getBoundingClientRect();
 
-      // Calculate position as percentage of viewport
-      // The gradient should be positioned so that the top-left corner of the viewport
-      // is the bright point (0% 0%) and bottom-right is the dark point (100% 100%)
-      // Negative offset to align with viewport gradient
-      // When window is at top-left (0,0), we want gradient to start there (bright)
-      // When window is at bottom-right, we want gradient to end there (dark)
-      const xPercent = -(rect.left / window.innerWidth) * 100;
-      const yPercent = -(rect.top / window.innerHeight) * 100;
+      // Pour un gradient synchronisé, on calcule la position de l'élément
+      // par rapport au viewport. Avec background-size: 100vw 100vh,
+      // le gradient couvre exactement le viewport et on décale simplement
+      // chaque fenêtre pour qu'elle affiche la bonne portion du gradient.
+      const xPercent = (rect.left / window.innerWidth) * 100;
+      const yPercent = (rect.top / window.innerHeight) * 100;
 
       setBackgroundPosition(`${xPercent}% ${yPercent}%`);
     };
