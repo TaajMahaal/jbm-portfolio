@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { profile, experiences, skills, education } from '../data/cv';
 import { useSystemInfo } from '../hooks/useSystemInfo';
 import SyncedWindow from './SyncedWindow';
-import TimelineOrb from './TimelineOrb';
 
 interface Pane {
   id: string;
@@ -402,11 +401,8 @@ function WorkContent({ showAll = false }: { showAll?: boolean }) {
     <div className="space-y-4 text-teal-100 h-full overflow-y-auto">
       <h2 className="section-header holo-text">Experience</h2>
       <div ref={timelineRef} className="relative space-y-5 pb-4 overflow-visible">
-        {/* Timeline line */}
-        <div className="absolute left-[24px] top-2 bottom-[-8px] w-px bg-teal-400/60"></div>
-
-        {/* Animated glowing orb */}
-        <TimelineOrb containerRef={timelineRef} />
+        {/* Timeline line avec gradient animé */}
+        <div className="timeline-gradient-line absolute left-[24px] top-2 bottom-[-8px] w-px pointer-events-none"></div>
 
         {experiencesToShow.map((exp, index) => (
           <div key={index} className="relative pl-12">

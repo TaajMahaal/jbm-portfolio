@@ -25,12 +25,21 @@ export default function TimelineOrb({ containerRef }: TimelineOrbProps) {
       const containerRect = containerRef.current.getBoundingClientRect();
       const positions: number[] = [];
 
+      // Calculate horizontal position from first point
+      let leftPosition = 20; // Fallback
+      if (points[0]) {
+        const firstPointRect = points[0].getBoundingClientRect();
+        const pointCenterX = firstPointRect.left + firstPointRect.width / 2;
+        // +6px to compensate for margin-left: -6px
+        leftPosition = pointCenterX - containerRect.left + 6;
+      }
+
       points.forEach((point) => {
         const rect = point.getBoundingClientRect();
-        // Point gold is 8px (w-2 h-2), orb is 8px
+        // Point gold is 8px (w-2 h-2), orb is 12px now
         // Both should align center to center
         const pointCenter = rect.top + rect.height / 2;
-        const relativeTop = pointCenter - containerRect.top - 4; // -4 to center the 8px orb
+        const relativeTop = pointCenter - containerRect.top - 6; // -6 to center the 12px orb
         positions.push(relativeTop);
       });
 
@@ -59,30 +68,12 @@ export default function TimelineOrb({ containerRef }: TimelineOrbProps) {
         `;
 
         if (i < positions.length - 1) {
-          // Pull (elastic stretch)
+          // Mouvement direct et fluide - pas de bounce back
+          const movePercent = startPercent + pauseDuration + moveDuration;
           keyframes += `
-            ${endPausePercent}% {
-              top: ${pos}px;
-              animation-timing-function: cubic-bezier(0.5, 0, 0.75, 0);
-            }
-          `;
-
-          // Overshoot before arriving
-          const overshootPercent = startPercent + pauseDuration + moveDuration - 0.5;
-          const overshootAmount = (positions[i + 1] - pos) * 0.1; // 10% overshoot
-          keyframes += `
-            ${overshootPercent}% {
-              top: ${positions[i + 1] + overshootAmount}px;
-              animation-timing-function: cubic-bezier(0.25, 0, 0.5, 1);
-            }
-          `;
-
-          // Settle on point (elastic bounce back)
-          const snapPercent = startPercent + pauseDuration + moveDuration;
-          keyframes += `
-            ${snapPercent}% {
+            ${movePercent}% {
               top: ${positions[i + 1]}px;
-              animation-timing-function: cubic-bezier(0.34, 1.2, 0.64, 1);
+              animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
             }
           `;
         }
@@ -114,30 +105,12 @@ export default function TimelineOrb({ containerRef }: TimelineOrbProps) {
         `;
 
         if (i > 0) {
-          // Pull
+          // Mouvement direct et fluide - pas de bounce back
+          const movePercent = startPercent + pauseDuration + moveDuration;
           keyframes += `
-            ${endPausePercent}% {
-              top: ${positions[i]}px;
-              animation-timing-function: cubic-bezier(0.5, 0, 0.75, 0);
-            }
-          `;
-
-          // Overshoot before arriving
-          const overshootPercent = startPercent + pauseDuration + moveDuration - 0.5;
-          const overshootAmount = (positions[i] - positions[i - 1]) * 0.1; // 10% overshoot
-          keyframes += `
-            ${overshootPercent}% {
-              top: ${positions[i - 1] - overshootAmount}px;
-              animation-timing-function: cubic-bezier(0.25, 0, 0.5, 1);
-            }
-          `;
-
-          // Settle on point (elastic bounce back)
-          const snapPercent = startPercent + pauseDuration + moveDuration;
-          keyframes += `
-            ${snapPercent}% {
+            ${movePercent}% {
               top: ${positions[i - 1]}px;
-              animation-timing-function: cubic-bezier(0.34, 1.2, 0.64, 1);
+              animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
             }
           `;
         }
@@ -159,6 +132,7 @@ export default function TimelineOrb({ containerRef }: TimelineOrbProps) {
         }
         .timeline-orb-animated {
           animation: ${animName} 30s linear infinite;
+          left: ${leftPosition}px;
         }
       `;
 
